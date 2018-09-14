@@ -1,0 +1,28 @@
+.kdm-clearfix {
+	
+}
+.key-date-mb-wrap {
+	
+}
+.key-date-mb-field-wrap {
+	
+}
+.key-date-mb-label {
+	display: inline-block;
+    min-width: 90px;
+    width: 10%;
+}
+.key-date-mb-label label {
+	font-weight: 700;
+}
+.key-date-mb-field {
+	display: inline-block;
+    min-width: 200px;
+    width: 87%;
+}
+.key-date-mb-field input {
+	margin-bottom: 15px;
+}
+.key-date-mb-field input.ilc-key-date-datepicker {
+	
+}
