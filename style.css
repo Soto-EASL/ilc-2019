@@ -816,6 +816,29 @@ body .sidebar-box .widget-title {
     background-image: url('images/passport2.png');
 }
 
+
+.travel-tab-icons2 .vc_tta-tabs-list .vc_tta-tab a{
+    background-size: 23px 23px;
+    padding-left: 37px !important;
+    background-position: 8px 14px;
+    background-repeat: no-repeat;
+}
+.travel-tab-icons2 .vc_tta-tabs-list .vc_tta-tab:nth-child(1) a {
+    background-image: url('images/airplane68.png');
+}
+.travel-tab-icons2 .vc_tta-tabs-list .vc_tta-tab:nth-child(2) a {
+    background-image: url('images/train20.png');
+}
+.travel-tab-icons2 .vc_tta-tabs-list .vc_tta-tab:nth-child(3) a {
+    background-image: url('images/taxi14.png');
+}
+.travel-tab-icons2 .vc_tta-tabs-list .vc_tta-tab:nth-child(4) a {
+    background-image: url('images/passport2.png');
+}
+.wpb-js-composer .travel-tab-icons2 .vc_tta.vc_general .vc_tta-icon {
+    color: #000;
+}
+
 .ilc-wpb-col-white > .vc_column-inner > .wpb_wrapper {
     background: #fff;
 }
