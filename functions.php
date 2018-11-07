@@ -2,10 +2,12 @@
 require_once get_stylesheet_directory() . '/inc/customizer.php';
 require_once get_stylesheet_directory() . '/inc/key-dates.php';
 require_once get_stylesheet_directory() . '/inc/total-extend.php';
+require_once get_stylesheet_directory() . '/inc/shortcodes/shortcodes.php';
 
 function ilc_theme_setup(){
 	// Register navigation menu
 	register_nav_menu( 'sponsors-exhibition', 'Sponsorship & Exhibition Menu.' );
+	register_nav_menu( 'sponsors-exhibition-2', 'Sponsorship & Exhibition Menu 2.' );
 }
 add_action( 'after_setup_theme', 'ilc_theme_setup' );
 
@@ -162,7 +164,7 @@ function ilc_nav_menu_objs($sorted_menu_items, $args){
     if(empty($args->theme_location)){
         return $sorted_menu_items;
     }
-
+    
     $current_col = $cols_parent = $hide_parent = false;
     foreach($sorted_menu_items as $k=>$item){
         if(!empty($hide_parent) && in_array($item->menu_item_parent, $hide_parent)){

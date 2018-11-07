@@ -6,7 +6,7 @@ Template: Total
 
 #top-bar-wrap {
     background-color: #fff;
-    background-image: url('images/header2018.png');
+    background-image: url('images/header2019.png');
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 0 none;
@@ -937,6 +937,78 @@ body .ilc-spex-content-container .vc_tta.vc_general .vc_tta-panels-container .vc
     margin-top: 10px;
 }
 
+.ilc-spex-menu-container-hz {
+    margin-bottom: 32px;
+}
+.menu-spex-hz {
+    list-style: none;
+    display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+    border-bottom: 2px solid #313f46;
+}
+.menu-spex-hz li {
+    margin: 0;
+    display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+    margin: 0 2px 0 0;
+    text-align: center;
+}
+.menu-spex-hz li:last-child {
+    margin-right: 0;
+}
+.menu-spex-hz li a {
+    font-size: 15px;
+    text-decoration: none;
+    text-align: left;
+    line-height: 26px;
+    font-weight: 400;
+    color: #a7a7a7;
+    display: block;
+    position: relative;
+    padding: 16px 20px 14px;
+    background: #e1e1e1;
+
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+.menu-spex-hz li.current-menu-item a,
+.menu-spex-hz li a:hover,
+.menu-spex-hz li a:active {
+    color: #fff;
+    background: #313f44;
+}
+.menu-spex-hz li.highlight-es-menu-item a{
+    color: #fff;
+    background-color: #004b87!important;
+}
+.page-template-sponsorship-exhibition-horizontal .gform_wrapper {
+    background: #ebebeb;
+    padding: 5px 20px 15px;
+}
+.page-template-sponsorship-exhibition-horizontal .gform_wrapper ul.gform_fields li.gfield {
+    padding-right: 0;
+}
+.page-template-sponsorship-exhibition-horizontal .gform_wrapper ul.gform_fields li.gfield.gf_left_third {
+    padding-right: 16px;
+}
+.page-template-sponsorship-exhibition-horizontal .gform_wrapper ul.gform_fields li.gfield.gf_middle_third {
+    padding-right: 16px;
+}
+.page-template-sponsorship-exhibition-horizontal .gform_wrapper .gform_heading {
+    margin-top: 10px;
+}
+
 .gform_widget .gform_wrapper {
     background: #ebebeb;
     padding: 5px 20px 15px;
@@ -1119,8 +1191,63 @@ body .gform_wrapper ul.gfield_checkbox li label {
 	-ms-transform: rotate(-180deg);
 	transform: rotate(-180deg);
 }
+.vc_message_box-icon > .fa {
+    font-size: 1.7em;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.site-footer-inner {
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+.site-footer .footer-widget {
+    padding-bottom: 5px;
+}
+.footer-widget .widget-title {
+    margin: 0;
+}
+.ilc-sitmap-center .ilc-sitemap-menu-wrap {
+    text-align: center;
+}
 
+.ilc-sitemap-menu-wrap .ilc-sitemap-menu {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em;
+}
+.ilc-sitemap-menu li {
+    margin: 0;
+}
+.ilc-sitemap-menu li a {
+    display: inline-block;
+    margin: 0 0 .8rem;
+    position: relative;
+}
+.ilc-sitemap-menu > li > a {
+    font-weight: 700;
+}
+.ilc-sitemap-menu .sub-menu {
+    margin-left: 2em;
+    margin-bottom: 0;
+}
+.ilc-sitemap-menu .sub-menu {
+    list-style-type: circle;
+}
+.ilc-sitemap-menu ul ul {
+    list-style-type: square;
+}
 @media only screen and (min-width: 768px) {
+    #footer-widgets.wpex-row .col.col-4 {
+        margin-top: 69px;
+    }
     body .wpb_wrapper.vc_figure {
         display: block;
     }
@@ -1259,7 +1386,7 @@ body .gform_wrapper ul.gfield_checkbox li label {
         margin-right: 0;
         float: none;
     }
-    .ilc-spex-menu-container {
+    .ilc-spex-menu-container, .ilc-spex-menu-container-hz {
         margin-bottom: 25px;
         position: relative;
     }
@@ -1282,7 +1409,7 @@ body .gform_wrapper ul.gfield_checkbox li label {
     .spex-menu-mobile-tray {
         display: block;
     }
-    .ilc-spex-menu {
+    .ilc-spex-menu, .ilc-spex-menu-hz {
         background: #fff;
         position: absolute;
         display: none;
@@ -1295,14 +1422,19 @@ body .gform_wrapper ul.gfield_checkbox li label {
         -webkit-transition: max-height .4s ease-in;
         transition: max-height .4s ease-in;
     }
-    .ilc-spex-menu ul {
-        padding-bottom: 20px;
+    .ilc-spex-menu-hz ul {
+        padding-bottom: 0;
         text-align: left;
+        display: block;
     }
-    .spex-mobile-menu-active .ilc-spex-menu  {
+    .spex-mobile-menu-active .ilc-spex-menu-hz  {
        
     }
-    .menu-spex li a {
+    .menu-spex-hz li {
+        display: block;
+        margin: 0 0 3px;
+    }
+    .menu-spex-hz li a {
         font-size: 14px;
         line-height: 20px;
         text-align: left;
