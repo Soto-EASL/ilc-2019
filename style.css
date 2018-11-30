@@ -1221,10 +1221,13 @@ body .gform_wrapper ul.gfield_checkbox li label {
 .ilc-sitemap-menu-wrap .ilc-sitemap-menu {
     display: inline-block;
     text-align: left;
-    margin: 0 0 0 1em;
+    margin: 0;
 }
 .ilc-sitemap-menu li {
     margin: 0;
+}
+.ilc-sitemap-menu > li {
+    list-style: none;
 }
 .ilc-sitemap-menu li a {
     display: inline-block;
@@ -1233,16 +1236,47 @@ body .gform_wrapper ul.gfield_checkbox li label {
 }
 .ilc-sitemap-menu > li > a {
     font-weight: 700;
+    padding: 2px 15px;
+    background: #004a87;
+    transition: all .25s;
+    position: relative;
+}
+.ilc-sitemap-menu > li > a::before {
+    content: "\f105";
+    font-family: FontAwesome;
+    display: inline-block;
+    position: absolute;
+    left: 7px;
+    top: 3px;
+}
+.ilc-sitemap-menu > li > a,
+.ilc-sitemap-menu > li > a:link,
+.ilc-sitemap-menu > li > a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.ilc-sitemap-menu > li > a:hover,
+.ilc-sitemap-menu > li > a:active {
+    background: #5fc3e6;
+    color: #fff;
+    text-decoration: none;
 }
 .ilc-sitemap-menu .sub-menu {
     margin-left: 2em;
     margin-bottom: 0;
 }
-.ilc-sitemap-menu .sub-menu {
-    list-style-type: circle;
+.ilc-sitemap-menu .sub-menu li a::before {
+    content: "\f105";
+    font-family: FontAwesome;
+    position: absolute;
+    left: -10px;
+    top: 1px;
 }
-.ilc-sitemap-menu ul ul {
-    list-style-type: square;
+.ilc-sitemap-menu .sub-menu {
+    list-style: none;
+}
+.ilc-sitemap-menu .sub-menu ul {
+    list-style: none;
 }
 @media only screen and (min-width: 768px) {
     #footer-widgets.wpex-row .col.col-4 {
