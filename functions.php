@@ -1,10 +1,11 @@
 <?php
+require_once get_theme_file_path('inc/post-types/post-types.php');
 require_once get_stylesheet_directory() . '/inc/customizer.php';
-require_once get_stylesheet_directory() . '/inc/key-dates.php';
 require_once get_stylesheet_directory() . '/inc/total-extend.php';
 require_once get_stylesheet_directory() . '/inc/shortcodes/shortcodes.php';
 
 function ilc_theme_setup(){
+	load_theme_textdomain('total-child');
 	// Register navigation menu
 	register_nav_menu( 'sponsors-exhibition', 'Sponsorship & Exhibition Menu.' );
 	register_nav_menu( 'sponsors-exhibition-2', 'Sponsorship & Exhibition Menu 2.' );
