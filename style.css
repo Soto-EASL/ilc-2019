@@ -1,7 +1,6 @@
 /*
 Theme Name: Total Child Theme
 Template: Total
-Text Domain: total-child
 */
 @import url("../Total/style.css");
 
@@ -45,6 +44,13 @@ Text Domain: total-child
 }
 #site-navigation .dropdown-menu ul a:hover {
     background: none;
+}
+body #site-header #site-navigation .dropdown-menu ul.sub-menu >li.menu-item >a {
+    color: #004a87;
+}
+body #site-header #site-navigation .dropdown-menu ul.sub-menu >li.menu-item >a:hover,
+body #site-header #site-navigation .dropdown-menu ul.sub-menu >li.menu-item >a:active {
+    color: #004a87;
 }
 #site-navigation li.megamenu ul.sub-menu li {
     border-left: 0 none;
@@ -248,6 +254,7 @@ body .no-margin {
     margin-bottom: 5px;
 }
 /**Key dates **/
+
 body .listing-key-dates .kdl-title {
     color: #fff;
     font-family: "Oswald";
@@ -287,91 +294,6 @@ body .listing-key-dates .kdl-title {
 .key-dates ul li.key-date:last-child {
     margin: 0;
 }
-
-/* VC Shortcode: Key Dates */
-.ilc-key-dates {}
-.ilc-key-dates-message_box {
-}
-.ilc-key-dates-message_box .ilc-key-dates-inner{
-    position: relative;
-    border: 2px solid #56b0ee;
-    padding: 14px 15px 14px 84px;
-}
-.ilc-key-dates-mbicon {
-    position: absolute;
-    width: 56px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.ilc-key-dates-mbicon .fa {
-    color: #56b0ee;
-    font-size: 24px;
-    line-height: 1em;
-    font-weight: 400;
-    font-style: normal;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-.ilc-key-dates-message_box .mb-key-date-title a{
-    color: inherit;
-    text-decoration: none;
-}
-
-.ilc-key-dates-bototm-content p:last-child {
-    margin-bottom: 0;
-}
-
-.ilc-key-dates-list .ilc-key-date-date-col {
-    width: 50%;
-}
-.ilc-key-dates-list .ilc-key-date-title-col {
-    width: 50%;
-}
-.ilc-key-dates-table .ilc-key-date-expired td {
-    color: #999;
-}
-.ilc-key-dates-table .ilc-key-date-expired td a {
-    color: inherit;
-}
-.ilc-key-dates-list ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.ilc-key-dates-list ul li {
-    font-family: "Oswald";
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 20px;
-}
-.ilc-key-dates-list ul li:last-child {
-    margin-bottom: 0;
-}
-.ilc-key-dates-list ul li span.ilc-kd-date {
-    color: #004a87;
-    display: block;
-    font-size: 18px;
-    margin-bottom: 2px;
-}
-.ilc-key-dates-message_box .mb-key-date-title.ilc-key-date-expired {
-    color: #999;
-}
-.ilc-key-dates-list ul li.ilc-key-date-expired  {
-    color: #999;
-}
-.ilc-key-dates-list ul li.ilc-key-date-expired  a,
-.ilc-key-dates-list ul li.ilc-key-date-expired span.ilc-kd-date {
-    color: inherit;
-}
-
-    /* Lat4t congress news */
 body .latest-congress-title {
     color: #004a87;
     font-family: "Oswald";
@@ -414,7 +336,7 @@ body .latest-congress-title {
 }
 .content-area{
     font-size: 14px;
-    line-height: 19px;
+    line-height: 19x;
     color: #415058;
 }
 .latesct-congress-news-list .vcex-recent-news-entry p{}
@@ -1298,70 +1220,6 @@ body .gform_wrapper ul.gfield_checkbox li label {
 }
 .footer-widget .widget-title {
     margin: 0;
-}
-.ilc-sitmap-center .ilc-sitemap-menu-wrap {
-    text-align: center;
-}
-
-.ilc-sitemap-menu-wrap .ilc-sitemap-menu {
-    display: inline-block;
-    text-align: left;
-    margin: 0;
-}
-.ilc-sitemap-menu li {
-    margin: 0;
-}
-.ilc-sitemap-menu > li {
-    list-style: none;
-}
-.ilc-sitemap-menu li a {
-    display: inline-block;
-    margin: 0 0 .8rem;
-    position: relative;
-}
-.ilc-sitemap-menu > li > a {
-    font-weight: 700;
-    padding: 2px 15px;
-    background: #004a87;
-    transition: all .25s;
-    position: relative;
-}
-.ilc-sitemap-menu > li > a::before {
-    content: "\f105";
-    font-family: FontAwesome;
-    display: inline-block;
-    position: absolute;
-    left: 7px;
-    top: 3px;
-}
-.ilc-sitemap-menu > li > a,
-.ilc-sitemap-menu > li > a:link,
-.ilc-sitemap-menu > li > a:visited {
-    color: #fff;
-    text-decoration: none;
-}
-.ilc-sitemap-menu > li > a:hover,
-.ilc-sitemap-menu > li > a:active {
-    background: #5fc3e6;
-    color: #fff;
-    text-decoration: none;
-}
-.ilc-sitemap-menu .sub-menu {
-    margin-left: 2em;
-    margin-bottom: 0;
-}
-.ilc-sitemap-menu .sub-menu li a::before {
-    content: "\f105";
-    font-family: FontAwesome;
-    position: absolute;
-    left: -10px;
-    top: 1px;
-}
-.ilc-sitemap-menu .sub-menu {
-    list-style: none;
-}
-.ilc-sitemap-menu .sub-menu ul {
-    list-style: none;
 }
 @media only screen and (min-width: 768px) {
     #footer-widgets.wpex-row .col.col-4 {
