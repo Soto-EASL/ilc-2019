@@ -1,5 +1,5 @@
 <?php
-require_once get_theme_file_path('inc/post-types/post-types.php');
+require_once get_stylesheet_directory() . '/inc/post-types/post-types.php';
 require_once get_stylesheet_directory() . '/inc/customizer.php';
 require_once get_stylesheet_directory() . '/inc/total-extend.php';
 require_once get_stylesheet_directory() . '/inc/shortcodes/shortcodes.php';
