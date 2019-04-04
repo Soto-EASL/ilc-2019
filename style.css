@@ -312,7 +312,7 @@ body .listing-key-dates .kdl-title {
     left: 0;
 }
 
-.ilc-key-dates-mbicon .fa {
+.ilc-key-dates-mbicon .ticon {
     color: #56b0ee;
     font-size: 24px;
     line-height: 1em;
@@ -1335,7 +1335,7 @@ body .gform_wrapper ul.gfield_checkbox li label {
 }
 .ilc-sitemap-menu > li > a::before {
     content: "\f105";
-    font-family: FontAwesome;
+    font-family: ticons;
     display: inline-block;
     position: absolute;
     left: 7px;
@@ -1359,7 +1359,7 @@ body .gform_wrapper ul.gfield_checkbox li label {
 }
 .ilc-sitemap-menu .sub-menu li a::before {
     content: "\f105";
-    font-family: FontAwesome;
+    font-family: ticons;
     position: absolute;
     left: -10px;
     top: 1px;

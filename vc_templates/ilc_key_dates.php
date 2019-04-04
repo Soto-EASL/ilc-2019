@@ -106,7 +106,7 @@ if ( $kd_query->have_posts() ):
         <div class="ilc-key-dates-inner">
             <div class="ilc-key-dates-list">
 	            <?php if ( $display_type == 'message_box' ): ?>
-                    <div class="ilc-key-dates-mbicon"><i class="fa fa-calendar"></i></div>
+                    <div class="ilc-key-dates-mbicon"><i class="ticon ticon-calendar"></i></div>
 	            <?php elseif ( $display_type == 'table' ): ?>
                     <table class="table-bordered table-light-blue">
                 <?php else: ?>
