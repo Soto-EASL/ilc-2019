@@ -14,12 +14,6 @@ return array(
 	'description'             => __( 'Display youtube video player', 'total-child' ),
 	'php_class_name'          => 'ILC_VC_Youtube_Player',
 	'params'                  => array(
-		array(
-			'type'        => 'textfield',
-			'heading'     => __( 'Widget Title', 'total-child' ),
-			'param_name'  => 'widget_title',
-			'admin_label' => true,
-		),
 		vc_map_add_css_animation(),
 		array(
 			'type'        => 'el_id',
@@ -87,6 +81,23 @@ return array(
 			'group'      => __( 'Video Info', 'total-child' ),
 		),
 		array(
+			'type'        => 'textfield',
+			'heading'     => __( 'Video Title', 'total-child' ),
+			'param_name'  => 'widget_title',
+			'admin_label' => true,
+			'group'      => __( 'View', 'total-child' ),
+		),
+		array(
+			'type'       => 'dropdown',
+			'heading'    => __( 'Title Position', 'total-child' ),
+			'param_name' => 'title_pos',
+			'value'      => array(
+				__( 'Top', 'total-child' ) => 'top',
+				__( 'Bottom', 'total-child' )   => 'bottom',
+			),
+			'group'      => __( 'View', 'total-child' ),
+		),
+		array(
 			'type'       => 'dropdown',
 			'heading'    => __( 'Video Cover Photo Source', 'total-child' ),
 			'param_name' => 'cover_image_type',
@@ -115,6 +126,13 @@ return array(
 			'heading'	 => __( 'CSS box', 'total-child' ),
 			'param_name' => 'css',
 			'group'		 => __( 'total-child', 'total-child' ),
+		),
+		array(
+			'type'       => 'vcex_ofswitch',
+			'std'        => 'false',
+			'heading'    => __( 'Show Video in a lightbox', 'total-child' ),
+			'param_name' => 'lightbox',
+			'group'      => __( 'View', 'total-child' ),
 		),
 	),
 );

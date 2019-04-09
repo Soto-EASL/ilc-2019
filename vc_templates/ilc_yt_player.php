@@ -10,7 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this ILC_VC_Youtube_Player
  */
 $el_class         = $el_id = $css = $css_animation = '';
-$widget_title     = '';
 $video_id         = '';
 $video_start      = '';
 $video_end        = '';
@@ -18,8 +17,11 @@ $autoplay         = '';
 $mute             = '';
 $controls         = '';
 $modestbranding   = '';
+$widget_title     = '';
+$title_pos        = '';
 $cover_image_type = '';
 $cover_image      = '';
+$lightbox         = '';
 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
@@ -45,8 +47,17 @@ $autoplay       = 'true' == $autoplay ? 1 : 0;
 $controls       = 'true' == $controls ? 1 : 0;
 $modestbranding = 'true' == $modestbranding ? 1 : 0;
 $mute           = 'true' == $mute ? 1 : 0;
+$lightbox       = 'true' == $lightbox ? 1 : 0;
+
+if(!in_array($title_pos, array('top', 'bottom'))){
+	$title_pos = 'top';
+}
 
 if ( $video_id ):
+	if ( $lightbox ) {
+		wp_enqueue_script( 'fancybox', get_stylesheet_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), '3.5.7', true );
+		wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri()  . '/css/jquery.fancybox.min.css' );
+	}
 	$this->load_scripts();
 	$player_data = array(
 		'data-id="' . $video_id . '"',
@@ -66,13 +77,15 @@ if ( $video_id ):
     <div class=" <?php echo esc_attr( $css_class ); ?>" <?php echo implode( ' ', $wrapper_attributes ); ?>
          xmlns="http://www.w3.org/1999/html">
 		<?php
-		if ( $widget_title ) {
-			echo wpb_widget_title( array( 'title' => $widget_title, 'extraclass' => 'ilc-yt-player-heading' ) );
+		if ( $widget_title && 'top' == $title_pos ) {
+			echo wpb_widget_title( array( 'title' => $widget_title, 'extraclass' => 'ilc-yt-player-heading ilc-yt-player-top' ) );
 		}
 		?>
         <div class="ilc-yt-player-wrap">
             <div class="ilc-yt-player-inner">
-                <div class="ilc-yt-player-container" <?php echo implode( ' ', $player_data ); ?>>
+                <div class="ilc-yt-player-container<?php if ( $lightbox ) {
+					echo ' ilc-yt-player-lightbox';
+				} ?>" <?php echo implode( ' ', $player_data ); ?>>
 					<?php if ( $cover_image ): ?>
                         <div class="ilc-yt-player-cover-image"
                              style="background-image: url('<?php echo esc_url( $cover_image ); ?>');"></div>
@@ -97,10 +110,23 @@ if ( $video_id ):
                             </div>
                         </div>
                     </div>
-                    <a class="ilc-yt-player-trigger" target="_blank"
-                       href="https://www.youtube.com/watch?v=<?php echo $video_id; ?>">&nbsp;</a>
+					<?php if ( $lightbox ): ?>
+                        <a class="ilc-yt-player-trigger ilc-yt-player-trigger-lightbox" data-fancybox target="_blank"
+                           href="https://www.youtube.com/watch?v=<?php echo $video_id; ?>">&nbsp;</a>
+					<?php else: ?>
+                        <a class="ilc-yt-player-trigger" target="_blank"
+                           href="https://www.youtube.com/watch?v=<?php echo $video_id; ?>">&nbsp;</a>
+					<?php endif; ?>
                 </div>
             </div>
         </div>
+	    <?php
+	    if ( $widget_title && 'bottom' == $title_pos ) {
+	        if($lightbox){
+		        $widget_title = '<a data-fancybox target="_blank" href="https://www.youtube.com/watch?v='. $video_id .'">'. $widget_title .'</a>';
+            }
+		    echo wpb_widget_title( array( 'title' => $widget_title, 'extraclass' => 'ilc-yt-player-heading ilc-yt-player-heading-bottom' ) );
+	    }
+	    ?>
     </div>
 <?php endif; ?>

@@ -383,6 +383,19 @@ body .listing-key-dates .kdl-title {
     color: inherit;
 }
 /* VC Shortcode: Youtube Video Player */
+.wpb_ilc_yt_player .ilc-yt-player-heading-bottom {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 15px 0 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #2c87f0;
+    text-align: left;
+}
+.wpb_ilc_yt_player .ilc-yt-player-heading-bottom a {
+    color: inherit;
+    text-decoration: none;
+}
 .ilc-yt-player-container {
     position: relative;
     height: 0;

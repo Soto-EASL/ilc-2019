@@ -96,7 +96,7 @@
             this.Storage.StartOnAPILoaded = [];
             this.Storage.Players = {};
             this.Storage.ApiCheckTimer = null;
-            $('.ilc-yt-player-container').each(function () {
+            $('.ilc-yt-player-container').not('.ilc-yt-player-lightbox').each(function () {
                 var playerID, $container = $(this);
                 playerCount++;
                 playerID = "ilc-yt-player-" + playerCount;
