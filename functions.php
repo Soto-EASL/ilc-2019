@@ -21,7 +21,7 @@ add_action('template_redirect', 'ilc_remove_parents_action');
 
 function ilc_custom_scripts(){
     if(wpex_get_mod('topbar_countdown_enable')){
-        wp_enqueue_script('countdown', get_stylesheet_directory_uri() . '/js/jquery.countdown.min.js', array('jquery'));
+        wp_enqueue_script('countdown', get_stylesheet_directory_uri() . '/js/jquery.countdown.min.js', array('jquery'), '2.1.0', true);
     }
     wp_enqueue_script('ilc-custom', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), null, true);
 	$ssl_scheme = is_ssl() ? 'https' : 'http';
@@ -31,6 +31,10 @@ function ilc_custom_scripts(){
 	wp_localize_script( 'ilc-custom', 'ILC', $fornt_end_data );
 }
 add_action('wp_enqueue_scripts', 'ilc_custom_scripts');
+function ilc_admin_custom_scripts() {
+	wp_enqueue_style('ilc-admin-common', get_stylesheet_directory_uri() . '/css/admin/common.css');
+}
+add_action('admin_enqueue_scripts', 'ilc_admin_custom_scripts');
 
 function ilc_template_parts($parts){
     $parts['topbar_countdown'] = 'partials/topbar/topbar-countdown';
