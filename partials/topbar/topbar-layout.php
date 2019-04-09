@@ -40,7 +40,7 @@ $abstract_enabled = wpex_get_mod('topbar_abstract_enable');
                                 <?php wpex_header_logo(); ?>
                             </div>
                             
-                            <?php if($registration_enabled || $ $abstract_enabled){?> 
+                            <?php if($registration_enabled || $abstract_enabled){?>
                             <div class="top-bar-col top-bar-col-regilink">
 								<?php if($registration_enabled): ?>
                                 <a class="theme-button" title="" href="<?php echo esc_url(trim(wpex_get_mod('topbar_registrationt_link'))); ?>" <?php if(wpex_get_mod('topbar_registration_newtab')){ echo ' target="_blank" '; } ?> >
@@ -55,11 +55,9 @@ $abstract_enabled = wpex_get_mod('topbar_abstract_enable');
                             </div>
                             <?php } ?>
                             
-                            <?php if(wpex_get_mod('topbar_countdown_enable')){ ?> 
-                            <div class="top-bar-col top-bar-col-countdown countdown-hide">
-                                <?php wpex_get_template_part('topbar_countdown'); ?>
-                            </div>
-                            <?php } ?>
+                            <?php if(wpex_get_mod('topbar_countdown_enable')){
+	                            wpex_get_template_part('topbar_countdown');
+                            } ?>
                         </div>
                     </div>
 

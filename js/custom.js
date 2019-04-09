@@ -58,6 +58,7 @@
             t.countdown({
                 until: new Date(date[0], date[1] - 1, date[2], time[0], time[1], time[2]),
                 timezone: z,
+                format: 'd',
                 layout: '<span class="countdown-dn">{dn}</span><br/><span class="countdown-dl">{dl} left</span>',
                 tickInterval: 60*60*24
             });

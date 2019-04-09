@@ -135,6 +135,11 @@ body #site-header #site-navigation .dropdown-menu ul.sub-menu >li.menu-item >a:a
     font-size: 16px;
     line-height: 16px;
 }
+.top-bar-col-countdown .ilc-countdown-text {
+    display: inline-block;
+    font-size: 44px;
+    line-height: 54px;
+}
 .top-bar-col-countdown .countdown-dl:before{
     content: "";
     display: block;

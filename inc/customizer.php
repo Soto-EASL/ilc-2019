@@ -131,23 +131,31 @@ function ilc_customizer_sections($sections) {
                 ),
             ),
             array(
-                'id' => 'topbar_countdown_enable_endc',
+                'id' => 'topbar_countdown_enable_next_cd',
                 'default' => '1',
                 'control' => array(
-                    'label' => esc_html__('Display end content', 'total'),
+                    'label' => esc_html__('Display next congress countdown', 'total'),
                     'type' => 'checkbox',
                 ),
             ),
-            array(
-                    'id' => 'topbar_countdown_end_content',
-                    'default' => '',
-                    'control' => array(
-                            'label' => esc_html__( 'End Content', 'total' ),
-                            'type' => 'wpex-textarea',
-                            'rows' => 7,
-                            'description' => esc_html__( 'This content will be displayed after the end date.', 'total' ),
-                    ),
-            ),
+	        array(
+		        'id' => 'topbar_countdown_start_nc',
+		        'default' => '',
+		        'control' => array(
+			        'label' => esc_html__('Next Congress Start', 'total'),
+			        'type' => 'text',
+			        'description' => 'Format must be <strong>YYYY-MM-DD HH:MM:SS</strong>, for example 2014-02-25 10:00:00',
+		        ),
+	        ),
+	        array(
+		        'id' => 'topbar_countdown_timezone_nc',
+		        'default' => '',
+		        'control' => array(
+			        'label' => esc_html__('Next Congress Time Zone Offset', 'total'),
+			        'type' => 'text',
+			        'description' => esc_html__('Set the time zone offset from GMT. For example +2 for Barcelona'),
+		        ),
+	        ),
         ),
     );
     
