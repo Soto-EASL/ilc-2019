@@ -11,7 +11,17 @@ function ilc_theme_setup(){
 	register_nav_menu( 'sponsors-exhibition-2', 'Sponsorship & Exhibition Menu 2.' );
 }
 add_action( 'after_setup_theme', 'ilc_theme_setup' );
+function total_child_enqueue_parent_theme_style() {
 
+	// Dynamically get version number of the parent stylesheet (lets browsers re-cache your stylesheet when you update your theme)
+	$theme   = wp_get_theme( 'Total' );
+	$version = $theme->get( 'Version' );
+
+	// Load the stylesheet
+	wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css', array(), $version );
+
+}
+add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
 function ilc_remove_parents_action(){
     // Remove logo from navigation row
     remove_action( 'wpex_hook_header_inner', 'wpex_header_logo' );

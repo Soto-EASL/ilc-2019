@@ -3,7 +3,6 @@ Theme Name: Total Child Theme
 Template: Total
 Text Domain: total-child
 */
-@import url("../Total/style.css");
 
 #top-bar-wrap {
     background-color: #fff;
@@ -819,6 +818,9 @@ body .latest-congress-title {
 .column-inner-padding0 .vc_column-inner{
     padding: 0!important;
 }
+.vcex-news-entry-details .vcex-recent-news-entry-title-heading a {
+    text-decoration: none;
+}
 body .button-marginb0.vc_btn3-container{
     margin-bottom: 0;
 }
@@ -1310,7 +1312,10 @@ body .ilc-spex-content-container .vc_tta.vc_general .vc_tta-panels-container .vc
 body .ilc-spex-content-container .vc_tta.vc_general .vc_tta-panels-container .vc_tta-panels{
     border-bottom: 0!important;
 }
-
+.menu-spex {
+    list-style: none;
+    margin: 0;
+}
 .menu-spex li {
     margin: 0 0 3px;
 }
