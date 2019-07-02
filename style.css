@@ -3,7 +3,10 @@ Theme Name: Total Child Theme
 Template: Total
 Text Domain: total-child
 */
-
+.post-in-category-press-release .alignright {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
 #top-bar-wrap {
     background-color: #fff;
     background-image: url('images/header2019.png');
@@ -1470,6 +1473,7 @@ body .ilc-spex-content-container .vc_tta.vc_general .vc_tta-panels-container .vc
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 5;
 }
 #ilc-close-stikcy-message {
     position: absolute;

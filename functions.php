@@ -334,3 +334,10 @@ function ilc_save_closed_footer_message(){
 	}
 	wp_send_json(array('status' => 'NO'));
 }
+
+add_filter( 'wpb_widget_title', 'easl_override_widget_title', 10, 2 );
+function easl_override_widget_title( $output = '', $params = array( '' ) ) {
+	$extraclass = ( isset( $params['extraclass'] ) ) ? " " . $params['extraclass'] : "";
+
+	return '<h1 class="entry-title' . $extraclass . '">' . $params['title'] . '</h1>';
+}
