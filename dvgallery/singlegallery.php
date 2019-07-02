@@ -35,7 +35,7 @@ $lghide = get_option('dvgallery_lghide');
             <?php if ( has_post_thumbnail() ) { ?>
                 <?php 
 $thumb_id = get_post_thumbnail_id();
-$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'dv-post-thumbnail', true);
 $thumb_url = $thumb_url_array[0];
                 ?>
                 <div class="dv-galleryimage <?php if($vertical == 'yes') { echo esc_attr('vertical'); } ?>" data-image="<?php echo esc_url($thumb_url); ?>">
